@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function chunkArrayInGroups(arr, size) {
+            let workArray = [];
+            let secArray = []
+            arr.forEach((e, i) => {
+                secArray.push(e);
+                if (secArray.length === size) {
+                    workArray.push(secArray);
+                    secArray = []
+                } else if (i == arr.length - (arr.length % size)) {
+                    console.log('ostatnie');
+                    workArray.push(secArray);
+                }
+
+            })
+            console.log(workArray)
+            return workArray;
+        }
+
+        chunkArrayInGroups(["a", "b", "c", "d", "a"], 3);
+        chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4);
+
+        chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4);
+
+        // [
+        //     [0, 1, 2, 3],
+        //     [4, 5, 6, 7],
+        //     [8]
+        // ]
+    </script>
+</body>
+
+</html>

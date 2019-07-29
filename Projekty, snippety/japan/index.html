@@ -1,0 +1,121 @@
+<!-- 
+    Układ 16:9
+    Ma być podobny (nie pixel w pixel)
+    Ma być responsywny (dostosowoywać się do wysokości przeglądarki)
+
+    ZŁOTE ZASADY
+    - Zrób tak jak potrafisz i tyle ile potrafisz
+    - Próbuj/testuj/sprawdzaj co by było. Takie próbowanie to najważniejsze cechy programisty
+    - Nie przeskakuj ćwiczenia. 
+ -->
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A dream about old Japan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .picture {
+            width: 60vw;
+            height: 33.3vw;
+            position: absolute;
+            top: calc(50% - 33.3vw/2);
+            left: calc(50% - 60vw/2);
+            overflow: hidden;
+            background-color: aqua;
+
+        }
+
+        img {
+            display: block;
+            position: absolute;
+        }
+
+        .class1 {
+            width: 100%;
+            top: 10%;
+        }
+
+        .class2 {
+            width: 100%;
+            bottom: -27%;
+        }
+
+        .class3 {
+            width: 100%;
+            bottom: -37%;
+        }
+
+        .class4 {
+            width: 100%;
+            bottom: -35%
+        }
+
+        .class5 {
+            width: 100%;
+            bottom: -45%;
+        }
+
+        .class6 {
+            width: 90%;
+            right: 0;
+            bottom: -64%;
+        }
+
+        .class7 {
+            height: 20%;
+            top: 5%;
+            left: 3%;
+        }
+
+        .class8 {
+            height: 8%;
+            left: -15%;
+            top: 10%;
+        }
+
+        .class9 {
+            height: 8%;
+            right: 3%;
+            top: 10%;
+        }
+
+        .class10 {
+            width: 32%;
+            right: 0;
+            top: 20%;
+        }
+
+        .class11 {
+            width: 7%;
+            left: 10%;
+            bottom: 10%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="picture">
+        <img src="img/japan1.png" alt="" class="class1">
+        <img src="img/japan2.png" alt="" class="class2">
+        <img src="img/japan3.png" alt="" class="class3">
+        <img src="img/japan4.png" alt="" class="class4">
+        <img src="img/japan5.png" alt="" class="class5">
+        <img src="img/japan6.png" alt="" class="class6">
+        <img src="img/japan7.png" alt="" class="class7">
+        <img src="img/japan8.png" alt="" class="class8">
+        <img src="img/japan9.png" alt="" class="class9">
+        <img src="img/japan10.png" alt="" class="class10">
+        <img src="img/japan11.png" alt="" class="class11">
+    </div>
+</body>
+
+</html>

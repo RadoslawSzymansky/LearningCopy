@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(180deg, black 10%, darkblue 68%,
+                darkorange 78%, rgb(245, 201, 4) 97%)
+                /* background-color: blue; */
+        }
+
+        div {
+            width: 1px;
+            height: 1px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            animation: stars 1s infinite;
+
+        }
+
+        div:nth-child(1) {
+            top: 65px;
+            left: 25%;
+        }
+
+        div:nth-child(2) {
+            top: 80px;
+            left: 15%;
+        }
+
+        div:nth-child(3) {
+            top: 186px;
+            left: 47%;
+        }
+
+        div:nth-child(4) {
+            top: 120px;
+            left: 48%;
+        }
+
+        div:nth-child(5) {
+            top: 110px;
+            left: 35%;
+        }
+
+        div:nth-child(6) {
+            top: 185px;
+            left: 35%;
+        }
+
+        @keyframes stars {
+            50% {
+                transform: scale(1.9)
+            }
+        }
+
+        div.moon {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            animation: none;
+            background-color: transparent;
+            top: 30px;
+            left: 75%;
+            box-shadow: 12px 5px yellow;
+
+        }
+
+        i {
+            font-size: 30px;
+            color: rgb(162, 209, 247);
+            animation: i 100s linear infinite;
+            margin-top: 30px
+        }
+
+        @keyframes i {
+            100% {
+                margin-left: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="1"></div>
+    <div class="2"></div>
+    <div class="3"></div>
+    <div class="4"></div>
+    <div class="5"></div>
+    <div></div>
+    <div class="moon"></div>
+    <i class="fas fa-cloud"></i>
+</body>
+
+</html>

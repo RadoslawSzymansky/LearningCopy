@@ -1,0 +1,11 @@
+.validation-hidden {
+  display: none;
+}
+
+.validation-active {
+  display: block;
+  color: #ff0000;
+  color: black;
+  height: 0;
+  top: 20px;
+}

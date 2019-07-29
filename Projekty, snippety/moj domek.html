@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        span {
+            background-color: brown;
+            padding: 35px;
+            margin: 100px;
+            font-size: 32px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        div {
+            position: absolute;
+            width: 0;
+            height: 0;
+            transition: 1s ease-out;
+            top: 100%;
+            left: 0%;
+
+
+        }
+
+        .komin {
+            transition: 1s .2s;
+        }
+
+        .dach {
+            transition: 1s .3s;
+        }
+
+        .dom {
+            transition: .8s .1s;
+        }
+
+        .drzwi {
+            transition: 1s .4s;
+        }
+
+        .okno1,
+        .okno2 {
+            transition: 1s .6s;
+        }
+
+
+        span:hover~.komin {
+            width: 5vh;
+            height: 8vh;
+            background-color: #aaa;
+            top: 50%;
+            left: 50%;
+            transform: translate(-0%, -190%);
+
+        }
+
+        span:hover~.dach {
+            width: 25vh;
+            height: 25vh;
+            background-color: black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        span:hover~.dom {
+            width: 35.5vh;
+            height: 25vh;
+            background-color: brown;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0%)
+        }
+
+        span:hover~.drzwi {
+            width: 8vh;
+            height: 12vh;
+            background-color: #bbb;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 105%);
+        }
+
+        span:hover~.okno1 {
+            width: 8vh;
+            height: 8vh;
+            background-color: aqua;
+            top: 50%;
+            left: 50%;
+            transform: translate(65%, 35%)
+        }
+
+        span:hover~.okno2 {
+            width: 8vh;
+            height: 8vh;
+            background-color: aqua;
+            top: 50%;
+            left: 50%;
+            transform: translate(-165%, 35%)
+        }
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div class="komin"></div>
+    <div class="dach"></div>
+    <div class="dom"></div>
+    <div class="drzwi"></div>
+    <div class="okno1"></div>
+    <div class="okno2"></div>
+</body>
+
+</html>

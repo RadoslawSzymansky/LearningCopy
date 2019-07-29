@@ -1,0 +1,54 @@
+.choiceBox {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  margin: 25px auto;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.choiceWrapper {
+  margin: 0 10px;
+}
+
+.btnPlay {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: darkcyan;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.1s
+}
+
+.btnPlay:hover {
+  background-color: #fff;
+  color: darkcyan;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  left: calc(50% - 50px);
+  width: 100px
+}
+
+.tooltip .tooltipInfo {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+
+}
+
+.tooltip:hover .tooltipInfo {
+  visibility: visible;
+}

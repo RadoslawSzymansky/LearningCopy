@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My DashBoard</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body{
+            margin: 0;
+        }
+
+        div{
+            display: flex;
+        }
+        .container{
+    background-color: #ddd;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(100, 100, 100);
+    
+
+}
+
+.calc > div.inputHolder{
+    width: 100%;
+}
+.calc input{
+    padding: 10px ;
+    font-size: 20px;
+    display: block;
+    width: 90%;
+    border: none;
+    color: rgb(156, 70, 70);
+    text-align: right;
+    background-color: #444;
+
+}
+
+span{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+}
+.calc >div{
+min-width: 31.33%;
+justify-content: center;
+align-content: center;
+border: 1px solid rgb(243, 169, 169);
+border-radius: 10px;
+box-sizing: border-box;
+background-color: rgb(97, 166, 255);
+overflow: hidden;
+margin: 1%;
+}
+
+.calc >div:not(.inputHolder){
+    padding: 15px 0;
+}
+.calc >div:not(.inputHolder):hover{
+    background-color: rgb(129, 175, 236);
+   }  
+   div.inputHolder{
+    background-color: #555;
+}
+h1{
+    text-align: center;
+    color: white;
+    width: 100%
+
+}
+h2{
+    text-align: center;
+    color: rgb(29, 221, 22);
+    width: 100%;
+
+}
+
+@keyframes reds {
+       100%{
+        background-color: rgb(124, 156, 223)
+    }
+}
+.calc >div:active {
+    background-color: rgb(184, 195, 197);
+    animation: reds .1s ;
+}
+.calc{
+    flex-wrap: wrap;
+    width: 350px;
+    height: 500px;
+    background-color: rgb(170, 223, 173);
+    padding: 0 20px;
+    box-shadow: 2px 2px 2px 2px rgb(37, 37, 37);
+    border-radius: 10px
+}
+h1,h2{
+    height: 20px;
+    color: rgb(61, 40, 40)
+}
+   </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="calc">
+            <h1 id="progress"></h1>
+
+            <div class="inputHolder"><input type="number" placeholder="Wprowadz dane"><span></span></div>
+            <div class="number">0</div>
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+            <div>+</div>
+            <div>-</div>
+            <div>*</div>
+            <div>/</div>
+            <div>=</div>
+            <h2 id="result"></h2>
+
+        </div>
+
+    </div>
+    <!-- --------- SCRIPTS --------- -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

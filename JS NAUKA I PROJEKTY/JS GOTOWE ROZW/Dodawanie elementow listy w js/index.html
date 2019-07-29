@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Przestawianie elementu</title>
+        <style>
+            body {
+                height: 100vh;
+                margin: 0;
+            }
+            div {
+            }
+        </style>
+    </head>
+
+    <body>
+        <div></div>
+        <script>
+            // pierwszy sposob
+            // let size = 255;
+            // changeBodyBackground = e => {
+            //     if (e.key == "ArrowUp" && size <= 255) {
+            //         size += 5;
+            //         document.body.style.backgroundColor = `rgb(${size},${size},${size})`;
+            //         console.log("do gory", e.key);
+            //     } else if (e.key == "ArrowDown" && size >= 0) {
+            //         size -= 5   ;
+            //         document.body.style.backgroundColor = `rgb(${size},${size},${size})`;
+            //         console.log("w dol", e.key);
+            //     }
+            // };
+            // window.addEventListener("keydown", changeBodyBackground);
+            /// -- -- Drugi  ----
+            let size = 0;
+            changeBodyBackground = e => {
+                switch (e.key) {
+                    case "ArrowUp":
+                        size <= 255 ? (size += 5) : null;
+                        document.body.style.backgroundColor =
+                         `rgb(${size},${size},${size})`;
+                        console.log("up");
+                        break;
+                    case "ArrowDown":
+                        console.log("down");
+                        size >= 0 ? (size -= 5) : null;
+
+                        size -= 5;
+                        document.body.style.backgroundColor = `rgb(${size},${size},${size})`;
+                }
+            };
+            window.addEventListener("keydown", changeBodyBackground);
+        </script>
+    </body>
+</html>

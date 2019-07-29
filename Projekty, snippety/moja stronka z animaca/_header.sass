@@ -1,0 +1,77 @@
+.header
+    overflow: hidden
+    height: 80vh
+    position: relative
+    margin-bottom: 50px
+    background-color: rgba(0,0,0, 0.5)
+    nav
+        height: 100%
+        z-index: 3
+        background-color: black
+        ul
+            display: flex
+            width: 100%
+            justify-content: space-around
+            height: 100%
+            li
+                width: 20%
+                z-index: 2
+                background-color: rgba(0,0,0, 0.1)
+                a
+                    display: block
+                    font-size: 4rem
+                    text-align: center
+                a:hover
+                    background-color: rgba(0,0,0, .8)
+                    border-radius: 40px
+
+    img 
+        min-width: 100%
+        min-height: 100%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        animation: Slider 9s linear infinite both
+        z-index: 1
+    img:nth-of-type(1)
+        
+    img:nth-of-type(2)
+        animation-delay: 3s
+    img:nth-of-type(3)
+        animation-delay: 6s
+    p
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        z-index: 2
+        font-size: 6rem
+        text-transform: uppercase
+        width: 100%
+        text-align: center
+        font-weight: bold
+        animation: Slider 9s linear infinite both
+    p:nth-of-type(2)
+        animation-delay: 3s
+    p:nth-of-type(3)
+        animation-delay: 6s
+
+ 
+
+
+
+@keyframes Slider 
+    0%
+        opacity: 0
+    3%
+        opacity: 1
+    33%
+        opacity: 1
+    34%
+        opacity: 0
+    100%
+        opacity: 0
+    
+
+

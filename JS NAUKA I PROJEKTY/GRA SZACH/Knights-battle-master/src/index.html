@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Knight battle</title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+
+  <body ng-app="mainModule" ng-controller="MainController">
+
+  <body>
+    <div class="left-side">
+      <div class="text-center">
+
+        <h1>KNIGHTS BATTLE</h1>
+
+        <form ng-show="!displayBoard" name="form" novalidate>
+
+          <div class="first-player">
+            <input name="firstPlayer" type="text" placeholder="First player..." ng-model="firstPlayer" required>
+            <div class="error" ng-show="(submitted && form.firstPlayer.$error.required)">Podaj nick pierwszego gracza</div>
+          </div>
+
+          <div class="second-player">
+            <input name="secondPlayer" type="text" placeholder="Second player..." ng-model="secondPlayer" required="true">
+            <div class="error" ng-show="(submitted && form.secondPlayer.$error.required)">Podaj nick drugiego gracza</div>
+            <div class="error" ng-show="secondPlayer == firstPlayer && firstPlayer.length > 0 && secondPlayer.length > 0">Nazwy nie mogą się powtarzać</div>
+          </div>
+
+          <button type="submit" class="start-button" ng-click="submitted=true; setHorses(form.firstPlayer, form.secondPlayer)">START</button>
+
+        </form>
+
+        <div class="ingame-wrapper" ng-show="displayBoard" ng-repeat="item in horses" ng-if="item.name">
+          <span ng-class="{'your-turn': item.name && item.move}">
+            <span class="player">Player {{item.name}}</span>
+          </span>
+        </div>
+
+        <h1>{{gameOverAlert}}</h1>
+
+      </div>
+    </div>
+
+    <!-- board -->
+    <div class="parent-wrapper">
+      <div class="parent">
+        <div ng-repeat="block in blocksList track by $index" ng-click="check($index)"
+          ng-class="{
+            'turn': horses[$index].name && container[$index].move,
+            'canJump': block.canJump === true && block.isSelected === true,
+            'disalbedBlock': block.isSelected === false,
+            'oddBlock': ($index % 2 === 0),
+            'evenBlock': ($index % 2 !== 0)
+          }"
+          class="child">
+          <div ng-if="displayBoard" class="btn btn-droppable" ng-model='container' data-drop="block.isSelected && block.canJump" data-drag="{{container[$index].drag}}" jqyoui-droppable="{index: {{$index}}, onDrop:'dropCallback($index)'}">
+            <img src="assets/blackHorse.png"
+              alt="black horse"
+              ng-mouseover="canJump($index)"
+              ng-mouseleave="cantJump($index)"
+              ng-show="container[$index].name"
+              data-drag="container[$index].move"
+              data-jqyoui-options="{revert: 'invalid'}"
+              ng-model="container"
+              jqyoui-draggable="{index: {{$index}}, animate:true, onDrop:'dropCallback($index)'}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- run `gulp inject` to automatically populate bower script dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- js files will be automatically insert here -->
+  <!-- endinject -->
+
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+</body>
+
+</html>

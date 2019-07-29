@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            function bouncer(arr) {
+                function isBigEnough(element) {
+                    // sprawdza czy true, mozna wszystko sprawdzić i jak zwróci false to nie bd tego w nowej tablicy!
+                    return element;
+                }
+                // mozna odrazu w filter zrobic funkcje
+                var filtered = arr.filter(isBigEnough);
+                console.log(filtered);
+                return filtered;
+            }
+
+            bouncer([7, "ate", "", false, 9]);
+        </script>
+    </body>
+</html>

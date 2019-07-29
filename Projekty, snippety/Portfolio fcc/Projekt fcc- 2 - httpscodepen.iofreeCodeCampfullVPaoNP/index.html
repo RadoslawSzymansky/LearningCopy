@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h1 id="title">Ankieta Form</h1>
+            <div id="super">
+                <p id="description">Powiedz nam jak możemy ulepszyć ten Bootcamp:</p>
+                <form action="submit" id="survey-form">
+                    <!--  -->
+                    <div class="rowTab">
+                        <div class="label">
+                            <label for='name'><sup>* </sup>Name:</label></br>
+                            <label for='email'><sup>* </sup>Email:</label></br>
+                            <label for='age'><sup>* </sup>Age:</label>
+                        </div>
+                        <div class="rightSide">
+                            <input type="text" id="name" placeholder="Name"></br>
+                            <input type="text" id="email" placeholder="Email adress"></br>
+                            <input type="number" id="age" placeholder="Your age"></br>
+
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="rowTab">
+                        <div class="label"><label for="role">Czym się aktualnie zajmujesz?</label></div>
+
+                        <div class="rightSide">
+                            <select name="role" id="role" class="rightSide">
+                                <option value="Uczeń" selected="selected">Uczeń</option>
+                                <option value="Student">Student</option>
+                                <option value="Bezrobotny">Bezrobotny</option>
+                                <option value="Stażysta">Stażysta</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <!--  -->
+                    <div class="rowTab">
+                        <div class="label">
+                            <label for="choiceOne">Jak bardzo byś polecił nasz kurs:</label>
+                        </div>
+
+                        <div class="rightSide">
+                            <input type="radio" name='howmuch' value="Słabo"><label> Słabo</label> </br>
+                            <input type="radio" name='howmuch' value="Słabo"><label> Słabo</label> </br>
+                            <input type="radio" name='howmuch' value="Słabo"><label> Słabo</label> </br>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="rowTab">
+                        <div class="label"><label for="role">Czym się aktualnie zajmujesz?</label></div>
+
+
+                        <div class="rightSide"><select name="role" id="like">
+                                <option value="czas" selected="selected">Czas nauki</option>
+                                <option value="Nauczycieli">Nauczycieli</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="rowTab">
+                        <div class="label"><label for="fewChoice">Co powinniśmy poprawić w naszym kursie?</label></div>
+
+                        <div class="rightSide">
+                            <input type="checkbox" name="Muzyka" value="Rock" />Bron<br />
+                            <input type="checkbox" name="Muzyka" value="Rock" />Sklepy<br />
+                            <input type="checkbox" name="Muzyka" value="Rock" />Kapkak<br />
+                            <input type="checkbox" name="Muzyka" value="Rock" />Skrobaczki<br />
+                            <input type="checkbox" name="Muzyka" value="Rock" />Kapary<br />
+                            <input type="checkbox" name="Muzyka" value="Rock" />Rock<br />
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="rowTab">
+                        <div class="label"><label for="comment">
+                                Dodatkowe informacje:
+                            </label></div>
+
+                        <div class="rightSide">
+                            <textarea name="Komenatrz" id="comment" cols="30" rows="5">Tutaj wpisz inforcję jakie chcesz nam przekazać....</textarea>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <input type="submit" value="Wyślij" id='button'>
+            </div>
+
+            </form>
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+</html>

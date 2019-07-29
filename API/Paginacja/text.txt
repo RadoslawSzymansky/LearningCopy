@@ -1,0 +1,6 @@
+1 . spoosob 
+ PRZESUNIECIE  (OFFSET/ PER_PAGE)
+ - offset ile elementow ma zostac pominiety w odpowierdzi
+ -- per_page ile elementow ma znalesc sie w jednej stronie wybnikow
+ 
+2. 

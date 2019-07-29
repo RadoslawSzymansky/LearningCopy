@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, omnis, velit quidem alias labore,
+            repellat soluta cum lptio voluptatem
+            quisquam aut asperiores reiciendis nulla est esse nihil praesentium rem sint qui ea soluta.
+        </h1>
+        <p class="first">
+            <img src="http://lorempixel.com/640/480/city" class="city
+            " alt="aa">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta deleniti voluptas dolore assumenda esse cum
+            aliquid adipisci nihil molestias libero, pariatur in nostrum quo rerum commodi fugiat ea est accusamus?
+        </p>
+        <p class="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae enim voluptatum numquam,
+            quas obcaecati tempore maiores totam magnam,<img src="http://lorempixel.com/640/480/nature" class="nature"
+                alt=""> itaque
+            minus aliquid quidem veritatis facilis suscipit porro
+            minima molestias neque ad.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, magni omnis quis ea facere delectus
+            sed perspiciatis deleniti? Temporibus fugiat maiores est pariatur aspernatur, ad deleniti? Possimus qui
+            reiciendis molestiae. Lorem, ipsum <img src="http://lorempixel.com/640/480/transport" class="transport"
+                alt=""> dolor sit amet
+            consectetur adipisicing elit. Illum, ut quod, sed alias suscipit a quibusdam facilis dicta pariatur, odio
+            non enim? Dicta tenetur quas esse veritatis aperiam! Odit, mollitia?</p>
+    </div>
+    <script>
+        const imagesSlide = document.querySelectorAll('img')
+
+        function debounce(func, wait, immediate) {
+            var timeout;
+
+            return function executedFunction() {
+                var context = this;
+                var args = arguments;
+
+                var later = function () {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+
+                var callNow = immediate && !timeout;
+
+                clearTimeout(timeout);
+
+                timeout = setTimeout(later, wait);
+
+                if (callNow) func.apply(context, args);
+            };
+        };
+
+        function checkSlide(e) {
+            console.log(e)
+            imagesSlide.forEach(slideimg => {
+                // pozycja scrolla od gory plus wysokowsc okna odjac polowa obrazka
+                const slideInAt = (window.scrollY + window.innerHeight) - slideimg.height / 2;
+                // way from top to bottom of image
+                const imageBotoom = slideimg.offsetTop + slideimg.height;
+                // sprawdzenie czy w polowie jest widoczny
+
+                const isHalfShown = slideInAt > slideimg.offsetTop
+                const isNotScrollPast = window.scrollY < imageBotoom
+                // sprawdzenie czy w scro
+
+                if (isHalfShown && isNotScrollPast) {
+                    slideimg.classList.add('active')
+                    console.log(slideimg)
+
+                } else {
+                    slideimg.classList.remove('active')
+                    console.log(slideimg)
+
+                }
+            })
+        }
+        window.addEventListener('scroll', debounce(checkSlide, 16, true))
+    </script>
+</body>
+
+</html>

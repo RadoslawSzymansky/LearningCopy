@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example form validator</title>
+    <style>
+        form{
+            width: 33.3%;
+            float: left;
+        }
+        input{
+            margin: 5px 0;
+        }
+        .validation-hidden {
+            display: none;
+        }
+        .validation-active {
+          display: block;
+          color: #ff0000;
+     }
+     
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form1" action="submit">
+            <label for="name">wiek</label>
+            <input type="number" data-validation="required minValue1"><br>
+            <label for="name">Imie</label>
+            <input type="text" data-validation="required minLength5 maxLength20"><br>
+            <label for="name">email</label>
+            <input type="email"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <form id="form2" action="submit">
+            <label for="name">Nazwisko</label>
+            <input type="password" data-validation="required"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <form id="form3" action="submit">
+            <label for="name" data-validation="required minValue1">wiek</label>
+            <input type="number"><br>
+            <label for="">Adres email</label>
+            <input type="email" data-validation="required email"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="vali.js"></script>
+</body>
+
+</html>

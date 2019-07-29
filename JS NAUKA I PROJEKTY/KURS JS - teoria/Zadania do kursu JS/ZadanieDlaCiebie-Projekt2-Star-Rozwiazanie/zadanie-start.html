@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadanie dla Ciebie - Skroll + zmiana wielkości prostokąta</title>
+</head>
+
+<body>
+    <script>
+        document.body.style.minHeight = '10000px';
+        const divPasek = document.createElement('div');
+        document.body.appendChild(divPasek);
+        divPasek.style.position = 'fixed';
+        divPasek.style.left = '0';
+        divPasek.style.backgroundColor = 'green';
+        divPasek.style.right = '0';
+        let size = 0;
+        divPasek.style.height = size + 'px';
+        const heightBody = window.innerHeight;
+
+
+        let grow = true;
+
+        //
+        window.addEventListener('scroll', changeHeight);
+
+        function changeHeight() {
+            if (grow) {
+                size += 20
+
+                divPasek.style.height = size + 'px';
+            } else {
+                size -= 20
+                divPasek.style.height = size + 'px';
+
+            }
+            if (size >= heightBody / 2) {
+                grow = !grow
+            } else if (size <= 0) {
+                grow = !grow
+            }
+
+        }
+    </script>
+</body>
+
+</html>
+<!-- 
+Zadanie
+
+
+JAVASCRIPT
+
+5.	zadanie, które ma realizować funkcja: prostokąt (div) rośnie do 50% wysokości okna przeglądarki (window.innerHeight/2). Tylko wysokość zmieniamy, szerokość bez zmian.
+6.	Po osiągnięciu 50% wysokości okna przeglądarki, nasz element div zaczyna maleć oraz zmienia kolor tła na czerwony. Wykorzystaj instrukcje warunkową i zmienną jako flagę (typ boolean).
+7.	Kiedy wysokość div-a będzie mniejsza od 0 to odwracamy działanie: teraz ma znowu rośnie i zmienia kolor na zielony.
+ -->

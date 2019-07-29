@@ -1,0 +1,1 @@
+funcka ktora wykonuje sie pomiedzy req a res , mozna takze dac next dzieki czemu po res mozna wyowlac nast middlewar

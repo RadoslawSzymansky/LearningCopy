@@ -1,0 +1,33 @@
+.container {
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+p::before,
+p::after {
+    display: table;
+    clear: both;
+    content: ""
+}
+
+img {
+    max-width: 200px;
+    float: left;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 0.5s
+}
+
+img.active {
+    opacity: 1;
+    transform: translateX(0px)
+}
+
+.first {
+    color: red
+}
+
+.second {
+    color: green
+}

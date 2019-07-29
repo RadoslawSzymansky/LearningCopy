@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 150vh;
+  font-family: "Slabo 27px", serif;
+  font-size: 12px;
+}
+
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  background-color: rgb(100%, 100%, 100%, 0.9);
+}
+
+/*  */
+#header .imgContainer {
+  height: 100%;
+  width: 5%;
+  margin-right: 3px;
+}
+
+#img-header {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#header h1 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#nav-bar {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  padding: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  margin: 0 5vw;
+}
+@media (max-width: 577px) {
+  #header {
+    flex-direction: column;
+  }
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* KONIEC HEADER< POCZATEK FEAUTYRES */
+}
+section {
+  padding: 2%;
+
+  padding-top: 15vh;
+  text-align: center;
+}
+#form {
+  margin-bottom: 10vh;
+  font-size: 16px;
+  font-weight: 700;
+}
+#form input {
+  margin: 1%;
+}
+#form button {
+  border: none;
+  background-color: rgb(232, 235, 39);
+  padding: 2px 15px;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+#form button:hover {
+  background-color: rgb(239, 243, 0);
+  padding: 4px 20px;
+  border: 1px solid red;
+}
+
+/* POD form */
+.icon {
+  float: left;
+  font-size: 2.5rem;
+  padding: 5px;
+  color: rgb(160, 63, 63);
+  width: 20%;
+}
+
+.contain {
+  margin: 20px 10%;
+  text-align: left;
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.feature {
+  margin-left: 10px;
+}
+.feature p {
+  padding: 10px 15vw;
+}
+
+/* video *
+/
+
+/* .video */
+.video {
+  margin: 30px 0;
+  text-align: center;
+}
+/* Teraz div z flexboxem ceny */
+
+#price {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 5vw;
+  margin: 20px 20vh;
+}
+#price div {
+  border: 1px solid black;
+  width: 30%;
+  text-align: center;
+  padding: 1px;
+}
+#price div h1 {
+  background-color: rgb(204, 216, 241);
+}
+#price div p {
+  margin: 10px;
+}
+.select {
+  margin: 10px;
+  background-color: rgb(192, 192, 48);
+  border: none;
+  padding: 5px;
+  transition: 0.3s;
+}
+.select:hover {
+  background-color: black;
+  color: white;
+}
+/* footer */
+footer {
+  background-color: rgb(221, 221, 221);
+  text-align: right;
+  padding: 5px;
+  margin: 0 5vw;
+}
+footer a {
+  color: #000;
+}

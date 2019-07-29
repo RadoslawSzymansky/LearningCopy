@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url("../images/main.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 30px; }
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
+  flex-wrap: wrap; }
+
+.results {
+  width: 340px;
+  height: 300px;
+  max-width: 90%;
+  position: relative;
+  background-image: url("../images/view.jpg");
+  background-size: cover;
+  box-shadow: 0 0 10px 5px #bfd1d1;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 40px auto; }
+
+.wrapp {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(2, 2, 2, 0.4);
+  z-index: 0;
+  text-shadow: 0 0 1px #030303; }
+
+.setPlayersForm {
+  position: absolute;
+  background-color: #e6e1e1;
+  background-image: url("../images/view.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.results h2,
+.results h3 {
+  padding: 5px;
+  margin-bottom: 15px;
+  text-align: center; }
+
+.players {
+  background-color: rgba(163, 111, 111, 0.333);
+  line-height: 50px;
+  color: #fc2a2a; }
+
+.results h3 {
+  text-align: left;
+  padding-left: 10px;
+  font-size: 28px; }
+
+.results .possibleMoves {
+  padding: 10px; }
+
+.results span {
+  color: #d7f81d; }
+
+.setPlayersForm.boxOff {
+  display: none; }
+
+.results h3 span {
+  color: red; }
+
+.setPlayersForm input {
+  margin-bottom: 10px; }
+
+.boardWrapper {
+  box-shadow: 0 0 10px 5px #bfd1d1;
+  min-width: 300px;
+  min-height: 300px; }
+
+.board {
+  max-width: 80vw;
+  max-height: 80vw;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.boardWrapper .board div {
+  width: 13.16%;
+  flex-basis: 13.16%;
+  box-shadow: 0px 0px 1px 1px #0c0c0c;
+  background-color: #d1cdcd;
+  height: 13.6%;
+  max-height: 13.16%; }
+
+.boardWrapper .board .boxOff {
+  background-color: #838282; }
+
+.boardWrapper .boxOn.disActive {
+  background-color: #7c7c7c; }
+
+.boardWrapper .boxOff.disActive,
+.boardWrapper .boxOn.disActive {
+  background-color: #b98e8e; }
+
+.boardWrapper .boxOn.movePossible,
+.boardWrapper .boxOff.movePossible {
+  background-color: #dafac8;
+  box-shadow: 0 0 2px 0 #fa38b0; }
+
+.boardWrapper .boxOn.horse {
+  background-image: url("/images/32904.svg");
+  background-position: center;
+  background-size: 100%;
+  position: relative; }
+
+.boardWrapper .boxOff.horse {
+  background-image: url("/images/32904.svg");
+  background-position: center;
+  background-size: 100%;
+  position: relative; }

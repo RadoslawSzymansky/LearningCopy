@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        button {
+            padding: 10px;
+            background-color: transparent;
+            border: none;
+            border: 2px dotted black;
+            border-radius: 20px;
+            margin: 0 auto;
+            display: block
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            margin: 50px auto;
+            flex-wrap: wrap
+        }
+
+        .container div {
+            background-color: #000;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">
+        Dodaj Element
+    </button>
+    <button id="btn-del">Usun</button>
+    <div class="container">
+    </div>
+    <script>
+        let i = 0;
+
+        const container = document.querySelector('.container');
+        const btnAdd = document.getElementById('btn')
+        const btnDel = document.getElementById('btn-del')
+
+        const addDiv = () => {
+            const newDiv = document.createElement('div');
+            newDiv.textContent = ++i;
+            container.appendChild(newDiv)
+            console.log(newDiv)
+            if (i / 5 == Math.floor(i / 5)) {
+                console.log('piaty')
+                newDiv.classList.add('red')
+            }
+        }
+        const delDiv = () => {
+            console.log(container.lastChild.remove())
+            i--
+        }
+        btnAdd.addEventListener('click', addDiv)
+        btnDel.addEventListener('click', delDiv)
+    </script>
+</body>
+
+</html>

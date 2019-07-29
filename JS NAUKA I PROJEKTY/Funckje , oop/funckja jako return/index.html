@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const askForDetails = function(job) {
+                if (job === "teacher") {
+                    return function(name) {
+                        console.log(`${name}, jakiego przedmiotu nauczyczas?`);
+                    };
+                } else if (job === "driver") {
+                    return function(name) {
+                        console.log(`${name}, jaki samochod?`);
+                    };
+                } else {
+                    return function(name) {
+                        console.log(`Jaki masz zawod? ${name}`);
+                    };
+                }
+            };
+
+            let teacher = askForDetails("teacher"); //  w tym teacherjohn jest funckja ktora jest zwracana przez askForDetails
+            let driver = askForDetails("driver");
+            let difretnt = askForDetails();
+
+            // teraz trrzeva ja wywolac a podany parametr bd oczywiscie argumentem w tej zwarcanej funckji czyliu name
+            let john = teacher("john");
+            // teraz inne tak samo;
+            let mary = driver("mary");
+            let kasia = difretnt("kasia");
+        </script>
+    </body>
+</html>

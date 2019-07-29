@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // // to jest konstruktor obiektu. function construktor
+            // var Person = function(name, year, job) {
+            //     this.name = name;
+            //     this.year = year;
+            //     this.job = job;
+            //     this.checkage = function() {
+            //         let year = 2019;
+            //         console.log("Wiek to:", year - this.year);
+            //         //  ta fnkcje bd mial okazdy nowy obiekt (instancja ) juz w sobie co nie jest zazwyczaj optymalne chyba ze tak poytzrbeujemy
+            //     };
+            // };
+            // Person.prototype.testFnProto = function() {
+            //     console.log(
+            //         "funckcja w proto, ktorej nie odziedzicza instancje ale bede mogly ja uzywac"
+            //     );
+            // };
+            // // tworzenie istajcji
+            // let john = new Person("John", 1992, "painter");
+            // console.log(john);
+            // john.checkage();
+            // john.testFnProto();
+
+            //  2 spoosb tworzenia za pomoca Object.create
+
+            var personProto = {
+                color: "blue",
+                checkAge: function() {
+                    this.Age = 2019 - this.year;
+                    return this.Age;
+                }
+            };
+            let john = Object.create(personProto, {
+                name: { value: "JOhn" },
+                year: { value: 1951 }
+            });
+            console.log(john);
+        </script>
+    </body>
+</html>

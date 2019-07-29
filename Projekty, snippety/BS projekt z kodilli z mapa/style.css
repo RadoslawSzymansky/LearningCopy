@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  background-color: rgb(184, 184, 184);
+}
+
+.welcome {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    23deg,
+    rgb(85, 85, 85),
+    rgb(58, 48, 48),
+    rgb(32, 32, 46),
+    rgb(62, 80, 62)
+  );
+  position: relative;
+  color: #fff;
+}
+
+.welcome .img-wrap {
+  height: 50px;
+  padding: 8px;
+  width: 50px;
+  float: left;
+}
+
+.welcome .img-wrap img {
+  height: 100%;
+  display: block;
+  width: auto;
+  border-radius: 50%;
+}
+
+.welcome ul {
+  width: 70%;
+  float: right;
+  text-align: right;
+  line-height: 40px;
+}
+
+.welcome ul li {
+  display: inline-block;
+  margin: 0 1%;
+}
+
+.welcome ul li a {
+  padding: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.welcome ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.welcome .textcontain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome h1,
+.welcome p {
+  text-align: center;
+  padding: 10px;
+}
+/* --- MAIN -- */
+/*... > GALLERY */
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.gallery {
+  padding: 30px 10px;
+}
+
+.gallery .photo {
+  width: 30%;
+  float: left;
+  margin-right: 5%;
+}
+
+.gallery .photo:last-of-type {
+  margin-right: 0%;
+}
+
+.gallery .photo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery .gall-desc p {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  float: none;
+}
+
+/* ...  Map */
+main .map {
+  margin-bottom: 60px;
+}
+
+main .map img {
+  max-width: 100%;
+}
+/* --- FOOTER --- */
+.footer p {
+  padding: 20px;
+  background-color: rgb(20, 20, 20);
+  color: red;
+}
+
+/* /// media  */
+
+@media (max-width: 1199px) {
+  .footer p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome .img-wrap {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .welcome ul {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .welcome ul li {
+    display: block;
+    margin: 5px auto;
+  }
+
+  .welcome ul li a {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    border-radius: 5px;
+  }
+
+  .welcome ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .welcome .textcontain {
+    position: absolute;
+    top: 60%;
+  }
+
+  .gallery .photo {
+    width: 51%;
+    float: none;
+    margin: 30px auto;
+  }
+
+  .gallery .photo:last-of-type {
+    margin: 30px auto;
+  }
+
+  .gallery .photo img {
+    max-width: 100%;
+    height: auto;
+  }
+}

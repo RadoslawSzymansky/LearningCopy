@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dodaj element</title>
+  <style>
+    li {
+      font-size: 20px
+    }
+
+    .big {
+      font-size: 30px
+    }
+  </style>
+</head>
+
+<body>
+  <button>Dodaj element do listy</button>
+  <ul>
+
+  </ul>
+  <script>
+    let counter = 1;
+    let createElement = function () {
+      let newElement = document.createElement('li');
+      unList.appendChild(newElement);
+      newElement.textContent = counter;
+      if (counter % 3 == 0) {
+        newElement.classList.add('big')
+      }
+      counter += 2;
+
+    };
+
+    const btn = document.querySelector('button');
+    const unList = document.querySelector('ul');
+    btn.addEventListener('click', createElement);
+  </script>
+
+</body>
+
+</html>
+
+<!-- 
+Etapy w tym projekcie
+
+
+5. Każdy element <li>, który zawiera liczbę podzielną przez 3 (a wiec zwracającą 0 z dzielenia przez 3) ma mieć większą font. (1) dodawaj więc (w funkcji, za pomocą instrukcji warunkowej) do takiego elementu klasę o nazwie big (już określona w css). Wykorzystaj instrukcję warunkową i modulo. 
+ -->

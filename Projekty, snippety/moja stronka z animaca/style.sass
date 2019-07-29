@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Francois+One&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Kumar+One+Outline&subset=latin-ext')
+*
+    margin: 0
+    padding: 0
+    list-style: none
+    text-decoration: none
+    color: white
+    font-family: 'Open sans', sans serif
+.clearfix
+    display: table
+    content: ''
+    clear: both
+body
+    background-color: rgba(235,235,235, 0.5)  
+div.container
+    margin: 0 auto
+@import 'header'
+@import 'wrap'
+div.menu
+    position: fixed
+    top: 20%
+    right: -105%
+    height: 45%
+    width: 25%
+    background-color: rgba(0,0,0, .9)
+    z-index: 3
+    color: white
+    font-size: 100px
+    text-align: center
+    line-height: 250px
+    transition: .3s
+div.menu.active
+    right: 5%
+
+.clearfix
+    display: table
+    content: ''
+    clear: both
+.fas.fa-bars
+    position: fixed
+    top: 2%
+    right: 1%
+    z-index: 5
+    font-size: 5rem
+    color: red
+.fas.fa-bars.active
+    position: fixed
+    top: 2%
+    right: 1%
+    z-index: 5
+    font-size: 5rem
+    color: black
+span.counter
+    height: 100px
+    font-size: 4rem
+    display: block
+    color: black
+    position: fixed
+    bottom: 45%
+    font-weight: bold
+    background-color: green
+    border-radius: 30px
+footer
+    width: 100%
+    color: black
+    text-align: center
+    background-color: rgb(125,12,135)
+    font-size: 3rem

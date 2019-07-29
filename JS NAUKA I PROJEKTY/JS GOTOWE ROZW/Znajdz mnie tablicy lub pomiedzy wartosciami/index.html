@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function getIndexToIns(arr, num) {
+        //     // Find my place in this sorted array. Where shoud i be? 10 20 30 . im 25 so my index shold be 2. after 20. but if there is 10, 5, 7. and im 20. My index should be 3. becase normal shold be 7 10 20 30 
+        //     index = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+
+        //         if (num > arr[i]) index++
+
+        //     }
+        //     console.log(index)
+
+        //     return index;
+        // }
+
+        // getIndexToIns([10, 20, 30, 40, 50], 35);
+
+
+
+        function mutation(arr) {
+            let first = arr[0].toLowerCase();
+            let second = arr[1].toLowerCase();
+            let counter = 0;
+            let doubleCOunter = 0;
+
+            for (let i = 0; i < arr[0].length; i++) {
+                for (let k = 0; k < first.length; k++) {
+                    if (first[i] === first[k]) {
+                        doubleCOunter++
+                    }
+                }
+                for (let j = 0; j < arr[1].length; j++) {
+                    if (first[i] === second[j]) counter++;
+                }
+            }
+            console.log(counter, doubleCOunter)
+            doubleCOunter = doubleCOunter - first.length;
+            counter = counter - doubleCOunter;
+
+            console.log(counter)
+            if (counter === arr[1].length) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        mutation(["hello", "hey"]);
+    </script>
+</body>
+
+</html>

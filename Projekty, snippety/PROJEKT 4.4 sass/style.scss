@@ -1,0 +1,632 @@
+// ------ VARIABLES  ---- //
+
+$mAuto: 0 auto;
+$mainColor: #00c7e8;
+$secondColor: #313332;
+
+// ---- MIXINS --- /
+@mixin clearfix {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+@mixin background($url, $repeat, $size) {
+    background: {
+        image: $url;
+        repeat: $repeat;
+        size: $size;
+    }
+}
+
+;
+
+@mixin sizeWH($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin fullwidth {
+    width: 100%;
+}
+
+@mixin bgc {
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+@mixin textCenter {
+    text-align: center;
+
+}
+
+@mixin textUp {
+    text-transform: uppercase;
+
+}
+
+
+/*! ---- GLOBAL STYLES ---- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        overflow-x: hidden;
+    }
+}
+
+.row {
+
+    &::before,
+    &::after {
+        @include clearfix;
+    }
+}
+
+
+section>.container {
+    margin: 50px auto;
+    @include textCenter;
+}
+
+/*! -------GRID------ */
+
+[class*="col-"] {
+    float: left;
+    min-height: 1px;
+    padding: 10px;
+}
+
+@for $i from 1 through 12 {
+
+    .col-m-#{$i} {
+        width: 8.333% * $i;
+    }
+}
+
+/*! --- CONTAINER --- */
+.container {
+    @include fullwidth;
+    max-width: 1200px;
+    margin: $mAuto;
+
+    &::after,
+    &::before {
+        @include clearfix;
+    }
+}
+
+/*! // -- HEADER --// */
+.menu {
+    background-color: $secondColor;
+    height: 50px;
+
+    nav {
+        >img {
+            position: relative;
+            @include sizeWH(30px, 30px);
+            top: 10px;
+            left: 10px;
+            border-radius: 50%;
+        }
+
+        >ul {
+            padding: 0;
+            list-style: none;
+            float: right;
+
+            li {
+                display: inline-block;
+
+                >a {
+                    line-height: 50px;
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 0 30px;
+                    color: #fff;
+                    @include textCenter;
+                    transition: 0.2s;
+
+                    &:hover {
+                        background-color: #3e413f;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*! ---------- SECTION WELCOME  - JUMBOTRON------------ */
+
+.hero {
+    background: {
+        image: url("https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        size: cover;
+        position: center;
+    }
+
+    ;
+    height: 50vh;
+
+    position: relative;
+
+    .slogan {
+        position: absolute;
+        top: 15vh;
+        right: 0;
+        min-width: 500px;
+        @include bgc;
+        padding: 30px 30px;
+
+        div {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 400;
+
+            >p~p {
+                font-weight: 700;
+            }
+
+        }
+    }
+}
+
+/*! -------- BENEFITS SECTION  */
+.benefit {
+    color: $secondColor;
+    margin: 50px 0;
+    padding: 0 40px;
+
+    >i {
+        font-size: 40px;
+        cursor: pointer;
+        margin-bottom: 30px;
+        display: inline-block;
+        @include sizeWH(80px, 80px);
+
+        border-radius: 20%;
+        line-height: 80px;
+        background-color: $secondColor;
+        color: #fff;
+    }
+
+    >h2 {
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #002629;
+    }
+
+    >p {
+        font-size: 14px;
+        color: #aaaaaa;
+        line-height: 160%;
+    }
+
+    i:hover {
+        background-color: $mainColor;
+    }
+
+    i:hover+h2 {
+        color: $mainColor;
+    }
+
+}
+
+/*!  SECTION FEATURED==----  */
+.features {
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    .featured>h1 {
+        text-transform: uppercase;
+        font-size: 32px;
+        padding: 15px;
+        color: $secondColor;
+    }
+
+    p {
+        color: #aaaaaa;
+    }
+
+}
+
+/*! // ----- SECTION GALLERY --------- */
+.gallery [class*="col-"] {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+
+    .layer {
+        position: absolute;
+        @include textCenter;
+        @include sizeWH(100%, 100%);
+        /* z-index: -1; */
+        transition: 0.4s;
+        top: -100%;
+
+        i {
+            font-size: 24px;
+            position: absolute;
+            top: calc(50% - 25px);
+            right: 25%;
+            color: #363636;
+            background-color: #f7f8e1;
+            @include sizeWH(50px, 50px);
+
+            line-height: 50px;
+            border-radius: 20%;
+            cursor: pointer;
+
+            &:nth-child(2) {
+                left: 25%;
+            }
+        }
+
+    }
+
+    img {
+        display: block;
+        @include fullwidth;
+    }
+
+    &:hover .layer {
+        @include bgc;
+        top: 0;
+    }
+}
+
+/*! ---------- TEAM -------- */
+.team {
+    margin: 120px 0;
+
+    [class*="col-"] {
+        padding: 20px;
+
+        .holder {
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                display: block;
+                @include fullwidth;
+            }
+
+            >h2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                line-height: 260px;
+                color: white;
+                transition: 0.3s;
+
+            }
+
+            &:hover h2 {
+                z-index: 0;
+                @include bgc();
+            }
+        }
+
+    }
+
+}
+
+/*! ------- SECTION IMAGE ------- */
+
+.yourtitle {
+    background-color: #5b5f5d;
+    background-image: linear-gradient(45deg, white, black 99%);
+
+    .content {
+        margin-left: 33.33%;
+    }
+
+    .container {
+        @include background(url(https://sklepsamsung.pl/gfx/tab3/images/galaxy-tab-s3_ent-feature3_s.png), no-repeat, 30%);
+
+        padding-top: 50px;
+        min-height: 400px;
+        color: white;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        text-align: left;
+        padding: 10px;
+        font-size: 32px;
+    }
+
+    p {
+        text-align: left;
+        line-height: 170%;
+        padding-right: 20px;
+    }
+}
+
+/*! // SECTION NUMBERS ----- */
+
+.numbers {
+    h2 {
+        font-size: 32px;
+        font-family: "Lobster";
+        letter-spacing: 2px;
+        color: $secondColor;
+
+        &.year span {
+            position: relative;
+            top: 2px;
+        }
+
+        &.clients span {
+            font-size: 28px;
+        }
+
+        &.projects span {
+            font-size: 30px;
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    p {
+        color: $mainColor;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+/*! FOOTER */
+.footer {
+    background-color: $secondColor;
+    color: white;
+
+    >.container>.row>[class*="col-"] {
+        padding: 20px;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        padding: 15px 0;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: "";
+            display: block;
+            border: 1px solid;
+            position: absolute;
+            width: 80px;
+            top: 50%;
+            right: -100px;
+        }
+    }
+
+    p.contact {
+        font-weight: bold;
+    }
+
+    .i-wrap {
+        padding: 20px 0;
+
+        i {
+            background-color: #00c7e8;
+            font-size: 24px;
+            line-height: 35px;
+            width: 35px;
+            @include textCenter;
+            margin: 1px;
+
+            &:hover {
+                background-color: #09a9c5;
+            }
+
+        }
+
+    }
+
+    .copyright {
+        @include textCenter;
+        background-color: #252726;
+        padding: 20px;
+    }
+
+
+}
+
+/*! //// MEDIA  / */
+@media (max-width: 1050px) {
+
+    /*! For desktop: */
+    .footer h1::after {
+        width: 80%;
+        position: static;
+        margin: 10px 0;
+    }
+
+}
+
+@media (max-width: 767px) {
+    /*!  global for media: */
+
+    @for $i from 1 through 12 {
+
+        .col-s-#{$i} {
+            width: 8.333% * $i;
+        }
+    }
+
+    /*! header class menu */
+    .menu {
+        height: auto;
+        @include textCenter;
+
+        nav {
+
+            &>ul {
+                padding: 10px;
+                list-style: none;
+                float: none;
+
+                li {
+                    display: block;
+
+                    &:not(:first-child) {
+                        display: none;
+                        margin: 10px 0;
+                    }
+                }
+
+                &.active li {
+                    display: block;
+                    margin: 10px 0;
+                }
+
+                &>li>a {
+                    display: block;
+                    background-color: #111;
+                    width: 50%;
+                    border-radius: 10px;
+                    margin: $mAuto;
+                }
+
+                &>img {
+                    display: inline-block;
+                    @include sizeWH(50px, 50px);
+
+                    position: absolute;
+                    left: 3px;
+                    top: 5px;
+                }
+
+            }
+        }
+    }
+
+    /*! /// class header.menu -slogan */
+    .hero {
+        height: 400px;
+
+        .slogan {
+            position: static;
+            min-width: 100%;
+            background-color: transparent;
+            padding: 50px 0px;
+
+            p {
+                @include bgc();
+                @include textCenter;
+                padding: 7px 20px;
+                margin-bottom: 70px;
+
+                &:nth-child(2) {
+                    @include bgc();
+                    @include textCenter;
+                }
+
+                &:nth-child(3) {
+                    @include bgc();
+                    @include textCenter;
+                }
+            }
+
+        }
+    }
+
+
+    /*! BENEFITS */
+    .benefit {
+        color: $secondColor;
+        margin: 20px 0;
+    }
+
+    /*! // FEAURTURES  */
+    .features {
+        margin: 0px;
+        padding: 0 20px;
+    }
+
+    /*! gallery */
+    .gallery [class*="col-"] {
+        img {
+            display: block;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        .layer {
+            position: absolute;
+            @include sizeWH(300px, 300px);
+            top: 6%;
+            left: calc(50% - 150px);
+            @include bgc;
+        }
+
+        &:hover .layer {
+            top: 6%;
+        }
+    }
+
+    /*! team --- */
+    .team [class*="col-"] .holder {
+        max-width: 300px;
+        margin: $mAuto;
+
+        &>h2 {
+            z-index: 1;
+            line-height: 280px;
+            /* padding-top: 45%; */
+            @include bgc;
+        }
+    }
+
+    /*! your title */
+    .yourtitle {
+        background-image: linear-gradient(45deg, #968d8d, black 99%);
+
+        .content {
+            margin: 0;
+            padding: 20px 30px;
+        }
+
+        .container {
+            background-image: none;
+            padding-top: 20px;
+            height: auto;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            text-align: left;
+            padding: 10px;
+            font-size: 32px;
+        }
+
+        p {
+            text-align: left;
+            line-height: 170%;
+            padding-right: 20px;
+        }
+    }
+
+    /*! footer */
+    /* footer */
+    .footer h1::after {
+        width: 70px;
+        position: absolute;
+        margin: 0;
+        right: -90px;
+    }
+}

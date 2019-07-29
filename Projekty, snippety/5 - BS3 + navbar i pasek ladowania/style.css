@@ -1,0 +1,41 @@
+body {
+    padding-top: 50px;
+}
+
+section:not(.footer) {
+    margin-bottom: 50px;
+}
+
+.navbar-header .navbar-brand {
+    color: rgb(143, 6, 6)
+}
+
+.progress {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    z-index: 1;
+}
+
+.jumbotron {
+    background: url(https://images.pexels.com/photos/258112/pexels-photo-258112.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center no-repeat;
+}
+
+.gallery,
+.contact {
+    margin-bottom: 80px;
+}
+
+.articles .media {
+    margin-bottom: 50px;
+}
+
+.footer {
+    background-color: #444;
+}
+
+.footer p {
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}

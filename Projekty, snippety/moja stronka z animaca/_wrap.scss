@@ -1,0 +1,115 @@
+section.wrap {
+    min-height: 100vh;
+
+    aside.aleft {
+        float: left;
+        min-width: 15%;
+        // kontener flex dla aside lewego:
+
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        justify-content: space-around;
+
+        margin: 20px;
+
+        a {
+            padding: 10%;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            border: 10px solid rgb(78, 77, 78);
+            border-radius: 35% 30px 35% 30px;
+            background-color: rgba(0, 111, 238, 0.9);
+            box-shadow: 30px 30px grey;
+            font-family: 'Francois One';
+            cursor: pointer;
+        }
+
+        a.active {
+            font-size: 3rem;
+            box-shadow: 30px 30px #333;
+        }
+
+        a:nth-of-type(2) {
+            background-color: rgba(218, 4, 4, 0.9);
+        }
+
+        a:nth-of-type(3) {
+            background-color: rgba(156, 236, 8, 0.9);
+        }
+
+        a:hover {
+            font-size: 3rem;
+            box-shadow: 30px 30px #333;
+
+        }
+
+        i {
+            padding-right: 30px;
+            color: rgb(255, 255, 255);
+        }
+
+    }
+
+
+
+
+    div.aright {
+        float: left;
+        width: 70%;
+        margin-left: 10vh;
+        color: #333;
+        margin-bottom: 30px;
+
+
+        h1 {
+            font-size: 5rem;
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+            font-family: 'Kumar One Outline';
+        }
+
+        p {
+            color: #333;
+            font-size: 2rem;
+
+        }
+
+        div.gallery {
+            display: flex;
+            height: 90vh;
+            flex-wrap: wrap;
+            margin: 50px;
+            justify-content: space-around;
+
+            align-content: space-around;
+
+            div {
+                position: relative;
+                overflow: hidden;
+                height: 360px;
+                flex-basis: 40%;
+                top: 0;
+                bottom: 0;
+            }
+
+            a {
+                height: 360px;
+                overflow: hidden;
+                position: absolute;
+
+
+
+
+                img {
+                    display: block;
+                    min-width: 100%;
+                    min-height: 100%;
+
+                }
+            }
+        }
+    }
+}

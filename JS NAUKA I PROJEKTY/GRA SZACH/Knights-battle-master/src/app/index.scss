@@ -1,0 +1,150 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"; /**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+body {
+  background-image: url("background.jpg");
+  background-size:100% auto;
+  .parent-wrapper {
+    height: 100%;
+    width: 45%;
+    margin-right: 50px;
+    margin-top: 30px;
+    float:right;
+
+    .parent {
+      display: flex;
+      font-size: 10px;
+      flex-wrap: wrap;
+      margin: -10px 0 0 -10px;
+
+      .child {
+        display: inline-block;
+        border: 1px solid #000;
+        margin: 10px 0 0 10px;
+        flex-grow: 1;
+        height: 70px;
+        width: calc(100% * (1/7) - 10px - 1px);
+
+        .btn-droppable {
+          width:78px;
+          height:68px;
+        }
+
+      }
+
+      .oddBlock {
+        background: #66442e;
+        color: #FFFFFF;
+      }
+
+      .evenBlock {
+        background: #f7ecca;
+      }
+
+      .disalbedBlock {
+        background:grey;
+      }
+
+      .canJump {
+        background: green;
+      }
+
+      .turn {
+        background: yellow;
+      }
+
+    }
+
+  }
+
+  .left-side {
+    transform:translate(0%,20%);
+    vertical-align: middle;
+    margin:30px 30px;
+    width:45%;
+    height:400px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border:1px dashed black;
+    float:left;
+
+    form {
+      margin-top:50px;
+      .first-player {
+        .error {
+          color:#b51212;
+          font-weight: 700;
+        }
+        margin:20px;
+      }
+
+      .second-player {
+        .error {
+          color:#b51212;
+          font-weight: 700;
+        }
+        margin:20px;
+      }
+      input {
+        width:250px;
+        height:40px;
+        padding-left:10px;
+        outline:none;
+        border:none;
+        border-bottom:2px solid black;
+        margin-bottom:10px;
+        background: transparent;
+        &:focus {
+          border-radius:10px;
+          background: white;
+        }
+      }
+
+      .start-button {
+        position:fixed;
+        bottom:0;
+        left:0;
+        transform:translate(20%);
+        margin-bottom:20px;
+        width:70%;
+        height:90px;
+        font-size:50px;
+        letter-spacing: 5px;
+        background:transparent;
+        outline:none;
+        border:2px dashed black;
+        transition:0.2s;
+        &:hover {
+          background:white;
+          color:black;
+          border:none;
+        }
+      }
+    }
+  }
+  .ingame-wrapper {
+    padding:30px 50px;
+    .your-turn {
+      .player {
+        border-bottom:3px solid yellow;
+        padding:10px;
+        font-size:30px;
+      }
+    }
+  }
+
+}
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

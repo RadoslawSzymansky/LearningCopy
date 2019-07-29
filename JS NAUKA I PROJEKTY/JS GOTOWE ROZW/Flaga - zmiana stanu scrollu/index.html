@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+</body>
+<script>
+    let size = 0;
+
+    document.body.style.height = 10000 + "px";
+    const newDiv = document.createElement('div');
+    newDiv.style.position = "fixed"
+    newDiv.style.width = "100%"
+    newDiv.style.backgroundColor = "green"
+    const maxSize = window.innerHeight / 2
+    let flag = true
+
+    function change() {
+        console.log('scrolluje');
+        newDiv.style.height = `${size}px`;
+        if (flag) {
+            size > maxSize ? flag = !flag : null;
+            size += 10;
+
+        } else {
+            size -= 10;
+            size <= 0 ? flag = !flag : null
+
+        }
+        flag ? newDiv.style.backgroundColor = "green" : newDiv.style.backgroundColor = "red"
+
+
+
+    }
+    document.body.appendChild(newDiv);
+    window.addEventListener("scroll", change)
+</script>
+
+</html>

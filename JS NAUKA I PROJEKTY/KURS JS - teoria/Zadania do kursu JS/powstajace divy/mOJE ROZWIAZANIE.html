@@ -1,0 +1,88 @@
+!
+
+<!-- 
+1. stworzyć plik index.html i strukturę dokumentu
+2. stworzyć przycisk w html
+3. ostylować przycisk i kwadraty, które będę tworzone
+JAVASCRIPT
+1. pobrać przycisk i podpiąć do niego nasłuchiwanie na click
+2. zadeklarować funkcję
+3. w funkcji stworzyć element html (div)
+4. dodać div do strony
+5. stworzyć licznik i uzupełnić zawartość elementu div o wartość licznika
+6. za pomocą instrukcji warunkowej stwierdzić czy dany element jest 5, jeśli tak nadać mu inną klasę 
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        button {
+            font-size: 40px;
+            padding: 20px 50px;
+            margin: 25px auto;
+            border-radius: 5px;
+            display: block;
+
+
+        }
+
+        div {
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .new {
+            width: 20vh;
+            height: 20vh;
+            font-size: 64px;
+            color: white;
+            background-color: black;
+            text-align: center;
+            line-height: 20vh
+        }
+
+        .newround {
+            background-color: #fff;
+            border: 3px solid black;
+            border-radius: 50%;
+            color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button>Przycisk</button>
+    <script>
+        console.log('WItaj');
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', newDiv)
+        let divNumber = 0;
+
+        function newDiv() {
+            const newElement = document.createElement('div');
+            document.body.appendChild(newElement);
+            newElement.classList.add('new');
+
+            newElement.textContent = `${++divNumber}`
+            console.log(divNumber)
+            if (divNumber / 5 == ((divNumber / 5).toFixed())) {
+                newElement.classList.add('newround');
+
+
+            }
+
+
+        }
+
+        // drugi sposob na if MODULO!! divNumber%5 = 0
+    </script>
+</body>
+
+</html>

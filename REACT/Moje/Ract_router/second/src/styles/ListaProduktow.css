@@ -1,0 +1,23 @@
+.products h2 {
+    margin-bottom: 20px;
+}
+
+.products ul {
+    list-style-type: square;
+}
+
+.products li {
+    margin-bottom: 20px;
+}
+
+.products a {
+    font-size: 22px;
+    color: rgb(66, 66, 66);
+    text-decoration: none
+}
+
+.products a:hover {
+    font-size: 22px;
+    color: rgb(24, 24, 24);
+    text-decoration: underline
+}

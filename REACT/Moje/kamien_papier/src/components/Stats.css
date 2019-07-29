@@ -1,0 +1,27 @@
+.stats {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    justify-content: space-around;
+    margin: 50px auto;
+    flex-wrap: wrap
+}
+
+.stats p {
+    margin-bottom: 5px;
+}
+
+.stats h3 {
+    margin-bottom: 15px;
+    color: darkcyan;
+    text-shadow: 0 0 5px rgb(222, 255, 74)
+}
+
+.lastGame,
+.gameResults {
+    border: 1px solid rgb(83, 149, 248);
+    min-width: 200px;
+    min-height: 200px;
+    padding: 10px;
+    background-color: rgba(170, 184, 245, 0.5);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background-image: linear-gradient(90deg, rgb(173, 212, 189), rgb(255, 255, 255), rgb(186, 229, 203));
+            height: 100vh;
+            font-family: 'Lato', serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+
+
+        @keyframes hot {
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+
+        button {
+            margin: 50px;
+            padding: 10px;
+            background-color: #1FCB63;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-size: 22px;
+            border: none;
+            color: white;
+            transition: 0.2s;
+
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #1FCB63;
+            box-shadow: 0px 0px 8px #1FCB63
+        }
+    </style>
+</head>
+
+<body>
+    <button id="inputF">Zamień na <sup>o</sup>F</button>
+    <button id="inputC">Zamień na <sup>o</sup>C</button>
+
+    <h1></h1>
+    <h2 id="ok"></h2>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+mamy 3 opcje router w react-rouer : (pokazywanie sciezki) - wazne przy deploymencie 
+HashRotuer po # np url/#/cos - BrowserRouter - normalnie pokazyje sciezke url/cos , MemoryRouter = caly czas normalny url. nawet jezeli jest url/user
+React-router ma swoj server tak jak by ktory jak nie znajdzie sciezki poprsotu zwaraca index html w z public. a normlany sevrer zwaraca 404
+client Id 884054055260-1mmjt6ao7hhe4qqkvdrm2j7lamhbsp96.apps.googleusercontent.com

@@ -1,0 +1,67 @@
+.btn {
+    width: 130px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+span {
+
+    left: 0;
+    right: 0;
+    height: 20%;
+
+    position: absolute;
+    border-radius: 10px;
+
+    -webkit-transition: background-color .5s, -webkit-transform .5s .5s;
+
+    transition: background-color .5s, -webkit-transform .5s .5s;
+
+    transition: background-color .5s, transform .5s .5s;
+
+    transition: background-color .5s, transform .5s .5s, -webkit-transform .5s .5s;
+
+    transition: background-color .5s .5s, transform .5s .5s, -webkit-transform .5s .5s;
+
+}
+
+span:nth-child(1) {
+    top: 0;
+    background-color: grey;
+}
+
+span:nth-child(2) {
+    top: calc(50% - 10%);
+    background-color: red;
+}
+
+span:nth-child(3) {
+    bottom: 0;
+    background-color: blue;
+}
+
+
+
+
+.active span:nth-child(1) {
+    top: 0;
+    background-color: blue;
+    -webkit-transform: translateY(25px);
+    transform: translateY(80px)
+}
+
+.active span:nth-child(2) {
+    top: calc(50% - 10%);
+    background-color: grey;
+}
+
+.active span:nth-child(3) {
+    bottom: 0;
+    background-color: red;
+    -webkit-transform: translateY(-80px);
+    transform: translateY(-80px)
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+@import url('https://fonts.googleapis.com/css?family=Antic+Didone');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: arial, sans-serif;
+    background-image: url(bcground.jpg);
+    background-size: cover;
+    color: azure;
+}
+
+body {
+    background-color: #fff3;
+    height: 100vh;
+}
+
+.logo {
+    margin: 0 auto;
+    margin-top: 60px;
+    max-width: 1000px;
+    color: rgba(221, 166, 59, 1);
+    font-size: 200px;
+    padding: px 10px;
+    text-align: center;
+    font-family: 'Merienda', cursive;
+    border-bottom: 5px solid rgba(221, 196, 69, .8);
+    border-radius: 28px;
+    letter-spacing: 10px;
+    line-height: 200px;
+    margin-bottom: 80px;
+
+}
+
+
+.nav ul {
+    padding-left: 20%;
+    list-style: none;
+}
+
+.nav ul li {
+    float: left;
+    margin: 10px 20px;
+
+}
+
+nav ul li a {
+    display: block;
+    color: floralwhite;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 15px 25px;
+    ;
+    background-color: rgba(210, 180, 140, .35);
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+
+nav ul li a:hover {
+    background-color: #2229;
+    color: aliceblue;
+
+
+}
+
+nav ul li:nth-child(5) {
+    float: right;
+}
+
+nav ul li:nth-child(5) a {
+    background-color: rgba(20, 20, 2, .85);
+}
+
+
+nav ul li:nth-child(5) a:hover {
+    background-color: rgba(255, 255, 255, .88);
+    color: black;
+}
+
+.fixclear::after {
+    content: '';
+    display: block;
+    clear: both;
+
+}
+
+article {
+    font-family: 'Antic Didone';
+    background-color: rgba(0, 0, 0, .7);
+    padding: 15px 10px;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 3.5rem;
+}
+
+p {
+    font-size: 2rem;
+    margin: 10px;
+    color: white;
+
+}
+
+p:last-child {
+    text-align: right;
+    text-decoration: underline
+}

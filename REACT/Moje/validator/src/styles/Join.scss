@@ -1,0 +1,47 @@
+#joinClub {
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    box-shadow: 0 0 5px 4px #FF5C2A;
+    align-self: flex-start;
+
+
+    select {
+        position: relative;
+        top: 5px
+    }
+
+    .btnContinue {
+        display: block;
+        margin-top: 40px;
+        margin-left: auto;
+        padding: 5px 25px;
+    }
+
+    .col-sm-8 {
+        min-width: 240px;
+    }
+
+    .form-check-input {
+        margin-left: 0;
+        height: 16px;
+    }
+
+    .checkLabel {
+        padding-left: 20px;
+        font-size: 12px;
+    }
+
+    .warning {
+        color: red;
+        font-size: 10px;
+    }
+    .pagination{
+        display: flex;
+        .btnComeBack{
+            display: block;
+            margin-top: 40px;
+            margin-right: auto;
+            padding: 5px 25px;
+        }
+    }
+}

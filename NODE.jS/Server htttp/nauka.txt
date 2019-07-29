@@ -1,0 +1,86 @@
+Folder  z nauka o serwerze html
+WebServer (Http server) - aplikacja program , ktora nasluchuje rzadanie od klienta , przetwarza je i wysyla odpowiedz.
+Najczesniej dziala o protokol Http
+TCP/IP Transimition Contol Protocol - fundament internemtu, definiuje w jw  jaki sposob kklient lączy sie z serwerem
+Socker - gniazdo, polaczenie miedzy klientem a serwerem. Otwiera sie i zamyka\
+Pakiety. Sposob w jaki nastepuje przesylanie danych
+Http HyperText Transfer Procotol. Zbior regul dla przesylanych danych i ich formatu. Okresla jak ma wygladac rzadanie, i jak ma wygladac odpowiedz.
+Powstal w 1991. 
+
+protokol / host(domena) / port /sciezka (url) to:
+https:/ web.pl:8080/ path / to / resorce
+
+PORT - nasze połączenie wymaga podania także portu, także IP. Nasz serwer moze nasluchiwac na roznych portach. Bo to jest port zeby rozdzielic rzadania.
+Nie wpisujemy ich recznie , bo istnieja domyslne porty : 
+http://nazwa.pl:80
+https://nazwa.pl:443
+
+  1.Żadanie HTTP!
+    - zawiera:
+      * nazwe metody (domyslnie get)
+      * ściezke url (bez portu i hosta!)
+      * wersje protokolu
+      * headers np {host: 'localhost:2000'}
+      * body np dane w formacie JSON
+
+    - emittowanie - poinformowanie ze cos sie wydarzylo, emitowane zadanie request na naszyms serwerze
+      wywoliuje callback okreslony w  funckji createServer
+    - czyli tyle ile razy jest emmitowany request , tyle razy wywola sie ten callback
+
+  2. Obiekt żania HTTP , 
+    -tworzony jako instacja klasy IncomingRequest i przekazywany jako 1 argument!
+      np: 
+        * req.url, method (jaka metoda zadania np post), headers
+
+  3. Obiekt odpowiedzi, 
+    - http.createServer((req, res) => {
+      * res.writeHead() - status odpowiedzi jako 1 argument i headert
+      * res.statusCode - kod odpowiedzi moze przypisac go do wlascicowe statusCode
+      * res.write('zawarosc odpowiezu') - w śtodku body, cialo odpowiedzi
+      * res.end('tut tez mozna dac zaqwartosc odpowiedzi!')
+    })
+    
+  4. MIME type lub Content-type  - identyfiaktor naszej odpowiedzi. Informujemy klineta co jest opdlsysane.
+    - {'Content-type' : 'application/json'}
+    - {'Content-type' : 'text/css'}
+    - {'Content-type' : 'video/mp4'}
+    - i inne
+
+  5. Proces jaki sie wykonuje gdy wbisujemy adres:
+    - Patrzec Network w devTools
+    - przegladarka uzupelni schemat, domyslnie uruchomi schemat http
+    - analiza adresu URL i ustalenie adresu ip . Przegladarka robi to za nas . Oraz wiele innych kroków.
+    - tworzone jest gniazo łaczące socket
+    - wysłanie rządania HTTP 
+    - odebranie żądania przez NOde.js
+    - W oparciu o logike dzieje sie to co zaporjketowalismy na dane zadanie i dane sciezki
+    -
+  
+  6. Kody odpowiedzi, Statusu
+    - kod 1xxx rzadkie
+    - kod 2xx suckes
+    - kod 3xxx przekierowanie
+    - kod 4xx bledy po stronie klienta, brak zasobow dla twojego url np
+    - kod 5xxx bledy serwerra
+
+  7. API application programming interface
+    - w kontekscie serwera. API internetowe, korzestajace z dostepnych dla innej aplickacji. Czyli np google bookks
+    itp
+    -- RESTful API jesli spelania standard RESTful
+    .
+  8. Endpoint - zdefiniowany url , ktory robi rozne rzeczy przy roznych zadaniach
+  
+  9. METODY HTTP
+    - GET, POST, DELETE,
+    - PUT - aktualizuje 
+    - HEAD, jak get ale mowi nie wysluj mi body spowrtorem, a jedynie headers!
+
+  10. Hostowanie aplikacji!
+    np
+    - Heroku
+    - Microsoft Azure
+    - Goolg Cloud Platfrom
+    - Amazaon web services
+    - MyDebil
+    - OVH
+  

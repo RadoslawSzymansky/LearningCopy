@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    font-size: 10px;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: #ccc;
+}
+
+#title {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px
+}
+
+#super {
+    background-color: rgb(230, 236, 230);
+    width: 60vw;
+    margin: 0px auto;
+}
+
+p#description {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.rightSide {
+    float: left;
+    margin-bottom: 10px
+}
+
+.label {
+    float: left;
+    width: 50%;
+    text-align: right;
+    height: auto;
+    padding-right: 10px;
+}
+
+.rightSide input {
+    text-align: left;
+    margin: 1px;
+}
+
+.rowTab::after {
+    display: block;
+    content: '';
+    clear: both;
+    text-align: left;
+}
+
+#button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 46%;
+
+    background-color: rgb(98, 173, 243);
+    width: 60px;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid black
+}

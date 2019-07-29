@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Section 2: JavaScript Language Basics</title>
+</head>
+
+<body>
+    <script>
+        function mutation(arr) {
+            let first = arr[0].toLowerCase();
+            let second = arr[1].toLowerCase();
+            let arrF = [];
+            let arrS = [];
+            for (let i = 0; i < first.length; i++) {
+                arrF.push(first[i])
+            }
+            for (let i = 0; i < second.length; i++) {
+                arrS.push(second[i])
+            }
+            console.log(arrF, arrS);
+            let flag = true;
+            for (let i = 0; i < arrS.length; i++) {
+
+                if (arrF.indexOf(arrS[i]) == -1) {
+                    flag = false;
+                }
+            }
+            console.log(flag)
+
+        }
+
+        console.log(mutation(["hello", "hello"]));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            top: 100px;
+            left: 100px;
+            transform: skew(-45deg, 45deg);
+
+        }
+
+        div::after {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            display: block;
+            content: '';
+            border-radius: 50%;
+            top: -150px;
+            left: 0;
+
+
+
+        }
+
+        div::before {
+            content: '';
+            display: block;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            border-radius: 50%;
+            top: 0px;
+            left: -50px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

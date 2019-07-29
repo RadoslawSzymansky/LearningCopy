@@ -1,0 +1,932 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Startowe własciwosci do 359px */
+
+.header {
+    height: 100vh;
+    background-color: #29a9df;
+    overflow: hidden;
+    position: relative;
+}
+
+.welcome {
+    font-family: 'Saira Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+.welcome p:nth-child(1) {
+    font-size: 40px;
+    margin-top: 6%;
+
+
+}
+
+.welcome p:nth-child(2) {
+    font-size: 20px;
+    padding-top: 5%;
+
+
+}
+
+.welcome p:nth-child(3) {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.header button {
+    margin-top: 5%;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'saira';
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-family: 'Saira';
+    font-weight: 300;
+
+}
+
+.header img {
+    position: absolute;
+    height: 75%;
+    left: 1px;
+    bottom: -17%;
+}
+
+
+
+
+/*wlasciwosci dodatkowe dla landscape*/
+
+/*/media powyzej 360 px*/
+
+@media (min-width: 360px) {
+    .welcome p:nth-child(1) {
+        font-size: 50px;
+    }
+
+    .welcome p:nth-child(2) {
+        font-size: 26px;
+    }
+
+    .welcome p:nth-child(3) {
+        font-size: 26px;
+    }
+
+    .header button {
+        margin-top: 3%;
+        font-size: 18px;
+    }
+
+}
+
+@media(min-width: 410px) {
+    .header img {
+        bottom: -10%;
+        left: -4%
+    }
+
+    .welcome p:nth-child(1) {
+        font-size: 55px;
+    }
+
+    .welcome p:nth-child(2) {
+        font-size: 30px;
+    }
+
+    .welcome p:nth-child(3) {
+        font-size: 30px;
+        padding-top: 0px;
+    }
+
+    .header button {
+
+        margin-top: 1%;
+        font-size: 20px;
+    }
+}
+
+
+@media(orientation: landscape) {
+    .welcome {
+        text-align: left;
+        padding: 4%
+    }
+
+    .header img {
+
+        height: 125%;
+        left: 48%;
+        bottom: -26%;
+
+    }
+
+    .welcome p:nth-child(1) {
+        font-size: 45px;
+    }
+
+    .welcome p:nth-child(2) {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .welcome p:nth-child(3) {
+        font-size: 20px;
+    }
+
+    .header button {
+
+        margin-top: 4%;
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 731px) {
+    .welcome p:nth-child(1) {
+        font-size: 55px;
+    }
+
+    .welcome p:nth-child(2) {
+        padding-top: 10px;
+        font-size: 24px;
+    }
+
+    .welcome p:nth-child(3) {
+        font-size: 24px;
+    }
+
+    .header button {
+
+        margin-top: 4%;
+        font-size: 16px;
+    }
+
+}
+
+@media (min-height: 800px) and (orientation: portrait) {
+
+    .header img {
+        left: -10%;
+        bottom: -6%;
+    }
+
+}
+
+@media (min-height: 800px) and (orientation: portrait) {
+
+    .header img {
+        left: 1%;
+        bottom: -18%;
+        height: 89%
+    }
+}
+
+
+/*urzadzeni desktopowe*/
+
+@media (min-width: 1024px) {
+    .header img {
+
+        height: 130vh;
+        left: 37%;
+        bottom: -27%;
+    }
+
+    .welcome {
+        margin-top: 3%
+    }
+
+    .welcome p:nth-child(1) {
+        font-size: 75px;
+    }
+
+    .welcome p:nth-child(2) {
+        padding-top: 10px;
+        font-size: 32px;
+    }
+
+    .welcome p:nth-child(3) {
+        font-size: 32px;
+    }
+
+    .header button {
+
+        margin-top: 4%;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .header img {
+
+        height: 130vh;
+        left: 47%;
+        bottom: -27%;
+    }
+
+    .welcome {
+        margin-top: 3px;
+    }
+
+    p {
+
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+
+    }
+
+    .welcome p:nth-child(1) {
+        font-size: 100px;
+    }
+
+    .welcome p:nth-child(2) {
+        padding-top: 10px;
+        font-size: 48px;
+    }
+
+    .welcome p:nth-child(3) {
+        font-size: 48px;
+    }
+
+    .header button {
+
+        margin-top: 4%;
+        font-size: 30px;
+    }
+
+    .header button:hover {
+
+        color: black;
+        cursor: pointer;
+        background-color: white;
+    }
+}
+
+@media (min-width: 1590px) {
+    .header img {
+
+        height: 130vh;
+        left: 55%;
+        bottom: -27%;
+    }
+
+    .welcome {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .welcome p:nth-child(1) {
+        font-size: 120px;
+    }
+
+    .welcome p:nth-child(2) {
+        padding-top: 10px;
+        font-size: 65px;
+    }
+
+    .welcome p:nth-child(3) {
+        font-size: 65px;
+    }
+
+    .header button {
+
+        margin-top: 4%;
+        font-size: 30px;
+    }
+
+    .header button:hover {
+
+        color: black;
+        cursor: pointer;
+        background-color: white;
+
+    }
+}
+
+
+
+/*SEKCJA 2 - .descripiton*/
+
+.description {
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+.description h1 {
+    font-family: 'Saira condensed';
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 10% 8% 0;
+
+}
+
+.description img {
+    width: 200px;
+    height: 120px;
+    margin-bottom: 6vh;
+
+}
+
+.description h2 {
+    text-transform: uppercase;
+    font-family: 'saira condensed';
+    font-weight: 700;
+}
+
+.description p {
+    font-family: 'saira';
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.services {
+    margin-top: 6vh;
+    padding: 0 5vh;
+
+
+}
+
+/*media powyzej 410px*/
+
+@media (min-width: 410px) {
+
+    .description h1 {
+
+        font-size: 30px;
+
+    }
+
+    .description img {
+        width: 240px;
+        height: 150px;
+
+    }
+
+    .description h2 {
+        font-size: 22px;
+    }
+
+    .description p {
+
+        font-size: 18px;
+    }
+}
+
+
+/*media 710+ */
+
+@media (min-width: 710px) {
+
+    .description h1 {
+
+        font-size: 56px;
+        margin-bottom: 4vh;
+    }
+
+    .description img {
+        width: 300px;
+        height: 185px;
+
+    }
+
+    .description h2 {
+        font-size: 34px;
+    }
+
+    .description p {
+
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+    .description .services {
+        display: inline-block;
+        width: 33%;
+
+
+        vertical-align: top;
+    }
+
+    .description {
+        font-size: 0;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .description h1 {
+
+        font-size: 74px;
+
+    }
+
+    .description img {
+        width: 250px;
+        height: 150px;
+
+
+    }
+
+    .description h2 {
+        font-size: 26px;
+    }
+
+    .description p {
+
+        font-size: 20px;
+    }
+}
+
+/*sekcja 3 projekt!!!!!!!!!!!*/
+
+.projects {
+    background-color: #1e1e1e;
+    color: white;
+
+}
+
+.project {
+    padding-bottom: 5vh;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.projects>h1 {
+
+    font-size: 30px;
+    line-height: 60px;
+    font-family: 'saira condensed', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.project img {
+    width: 100%;
+    display: block;
+
+
+}
+
+.project .opis {
+    background-color: #ff4f2c;
+    font-family: 'saira', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+
+}
+
+.project .opis h1 {
+    text-transform: uppercas;
+    font-weight: 400;
+    font-size: 18px;
+    border-bottom: 1px solid white;
+    margin-right: 10vw;
+    text-indent: 15px;
+
+}
+
+.project:nth-of-type(even) .opis {
+    background-color: #0170ba;
+
+}
+
+.opis p {
+    padding: 15px;
+}
+
+
+/*media powyzej 360px;*/
+
+@media(min-width: 360px) {
+    .project .opis {
+        font-size: 14px;
+
+    }
+
+    .project .opis h1 {
+        font-size: 22px;
+
+
+    }
+}
+
+@media(min-width: 410px) {
+    .project .opis {
+        font-size: 18px;
+
+    }
+
+    .project .opis h1 {
+        font-size: 24px;
+
+
+    }
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+    .project .opis {
+        font-size: 24px;
+
+    }
+
+    .project .opis h1 {
+        font-size: 34px;
+
+
+    }
+}
+
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+/*media lanscape lub powyzej 667px*/
+
+@media (min-width: 660px) {
+
+
+    .project img {
+        width: 50%;
+        display: block;
+        float: left;
+        height: 150px;
+    }
+
+    .project .opis {
+        float: left;
+        width: 50%;
+        font-weight: 400;
+        font-size: 12px;
+        height: 150px;
+
+
+    }
+
+    .project .opis h1 {
+        font-size: 18px;
+        border-bottom: 1px solid white;
+        margin-right: 10vw;
+
+
+    }
+
+
+    .project:nth-of-type(even) img {
+        float: right;
+
+    }
+
+    .project:nth-of-type(even) .opis {
+        padding-left: 15px;
+    }
+
+    .project:nth-of-type(even) h1 {
+
+        margin-right: 0;
+        margin-left: 15px;
+        text-indent: 0px;
+    }
+}
+
+
+@media (min-width: 800px) {
+
+    .project img,
+    .project .opis {
+        height: 190px;
+
+    }
+
+    .project .opis {
+        padding-top: 5%;
+    }
+}
+
+@media(min-width: 1024px) {
+
+    .project img,
+    .project .opis {
+        height: 220px;
+    }
+
+    .project .opis {
+        padding-top: 3vh;
+        font-size: 16px;
+    }
+
+    .project .opis h1 {
+        font-size: 22px;
+    }
+}
+
+@media(min-width: 1240px) {
+
+    .project img,
+    .project .opis {
+        height: 260px;
+    }
+
+    .project .opis {
+        padding-top: 5vh;
+        font-size: 20px;
+    }
+
+    .project .opis h1 {
+        font-size: 26px;
+    }
+}
+
+
+/*SEKCJA 4!!!!!!!!!!!!*/
+
+.motto {
+    background-image: url(../img/bg.jpg);
+    height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'saira';
+    text-align: center;
+}
+
+.motto p {
+    font-size: 30p;
+    padding: 60px 20%;
+}
+
+.motto .bg {
+    background-color: rgba(0, 63, 114, .6);
+    height: 100%;
+    padding: 5% 10%;
+
+}
+
+.section5 {
+    height: 200vh;
+}
+
+@media(orientation: portrait) {
+    .motto {
+        height: 60vh;
+    }
+}
+
+@media (min-width:736px) {
+    .motto p {
+        font-size: 24px;
+    }
+
+    .motto h1 {
+        font-size: 42px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .motto p {
+        font-size: 48px;
+    }
+
+    .motto h1 {
+        font-size: 85px;
+        padding-bottom: 70px;
+    }
+}
+
+
+/*    Sekcja 5 hobby !!!!!*/
+
+.hobby h1 {
+    text-transform: uppercase;
+    font-family: 'saira';
+    font-size: 18px;
+    text-align: center;
+    line-height: 300%
+}
+
+.item {
+    height: 50vh;
+    font-family: 'saira condensed', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+
+}
+
+.item p {
+    line-height: 250%;
+    background-color: #0007;
+    font-size: 22px;
+    ;
+}
+
+.hobby .item:nth-of-type(1) {
+    background-image: url(../img/hobby1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hobby .item:nth-of-type(2) {
+    background-image: url(../img/hobby2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hobby .item:nth-of-type(3) {
+    background-image: url(../img/hobby3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hobby .item:nth-of-type(4) {
+    background-image: url(../img/hobby4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@media(orientation: landscape) {
+    .item {
+        height: 50vh
+    }
+}
+
+@media(min-width:750px) {
+    .item p {
+        font-size: 40px;
+    }
+
+    .hobby h1 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 812px) and (orientation: landscape) {
+    .hobby .item {
+        width: 50%;
+        float: left;
+        max-height: 50vh;
+    }
+
+    .hobby {
+        max-width: 1420px;
+        margin: 0 auto;
+    }
+
+    body>.hobby>.item p {
+
+
+        opacity: 0;
+        -webkit-transition: 1.5s;
+        transition: 1.5s;
+
+
+    }
+
+    body>.hobby>.item:hover p {
+        opacity: 1;
+
+    }
+
+    .hobby .item:nth-of-type(n) {
+        -webkit-transition: 2s;
+        transition: 2s;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .hobby .item:hover {
+        background-size: 130%;
+    }
+}
+
+
+
+
+
+/*sekcja 6 kontakt*/
+
+.kontakt {
+    background: #111;
+    color: white;
+    font-family: 'Saira';
+}
+
+.kontakt h1 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 15px;
+}
+
+textarea,
+form button,
+input {
+    display: block;
+    font-family: 'saira';
+    font-size: 12px;
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px
+}
+
+textarea {
+    height: 70px;
+}
+
+form button {
+    font-size: 14px;
+    background-color: transparent;
+    color: white;
+    line-height: 36px;
+    width: 80%;
+    margin: 15px auto
+}
+
+.social img {
+    float: left;
+    margin: 10px
+}
+
+.social span {
+    font-size: 16px;
+    line-height: 90px;
+}
+
+.socials {
+    padding-left: 10%;
+}
+
+
+
+@media (min-width: 1024px) {
+    .wrap {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .wrap form {
+        width: 50%;
+        float: left;
+    }
+
+    .socials {
+        width: 50%;
+        float: left
+    }
+
+    .kontakt h1 {
+        font-size: 55px;
+    }
+
+    textarea,
+    button,
+    input {
+        font-size: 24px;
+        margin-bottom: 30px
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+}
+
+
+
+
+/*foooter ! ! ! ! ! ! !*/
+
+.footer footer {
+    font-size: 25px;
+    background-color: #29a9df;
+    text-align: center;
+    line-height: 250%;
+
+
+}

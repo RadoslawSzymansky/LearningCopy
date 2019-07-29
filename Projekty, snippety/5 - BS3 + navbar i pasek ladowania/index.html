@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Firma</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Strona Główna</a></li>
+                <li><a href="#">Dojazd</a></li>
+                <li><a href="#">O nas!</a></li>
+                <li><a href="#">Kontakt</a></li>
+
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Szukaj">
+                </div>
+                <button type="submit" class="btn btn-default">Szukaj</button>
+            </form>
+        </div>
+    </nav>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            <span class="sr-only">60% Complete</span>
+        </div>
+    </div>
+    <!-- section welcome jumbotron -->
+    <section class="jumbotron  text-center">
+        <div class="container"></div>
+        <h1>Welcome! <small>It's good to see you!</small></h1>
+        <button class="btn btn-primary btn-lg">Zaczynamy!</button>
+    </section>
+
+    <!-- // content with gallery and table -->
+    <section class="content container">
+        <h1 class="text-center">Galeria</h1>
+
+        <div class="row gallery clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="https://picsum.photos/500/450/?random" alt="random photo" class="img-responsive img-thumbnail center-block">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="https://picsum.photos/500/450/?random" alt="random photo" class="img-responsive img-thumbnail center-block">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="https://picsum.photos/500/450/?random" alt="random photo" class="img-responsive img-thumbnail center-block">
+            </div>
+            <div class="col-xs-12 col-sm-6  col-md-3">
+                <img src="https://picsum.photos/500/450/?random" alt="random photo" class="img-responsive img-thumbnail center-block">
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-center table-striped table-bordered">
+                <thead>
+                    <tr class="success">
+                        <th class="text-center ">Cena</th>
+                        <th class="text-center ">Waga</th>
+                        <th class="text-center ">Skład</th>
+                        <th class="text-center ">Promocja</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cena</td>
+                        <td>Waga</td>
+                        <td>Skład</td>
+                        <td>Promocja</td>
+                    </tr>
+                    <tr>
+                        <td>Cena</td>
+                        <td>Waga</td>
+                        <td>Skład</td>
+                        <td>Promocja</td>
+                    </tr>
+                    <tr>
+                        <td>Cena</td>
+                        <td>Waga</td>
+                        <td>Skład</td>
+                        <td>Promocja</td>
+                    </tr>
+                    <tr>
+                        <td>Cena</td>
+                        <td>Waga</td>
+                        <td>Skład</td>
+                        <td>Promocja</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+    <!-- /// contact form -->
+    <div class="contact container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-md-offset-3">
+                <form action="submit">
+                    <div class="form-group">
+                        <label for="name">Imię:</label>
+                        <input class="form-control" id="name" type="text" placeholder="np. Jan">
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Nazwisko:</label>
+                        <input class="form-control" id="surname" type="text" placeholder="np. Kowalski">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Prośba:</label>
+                        <textarea name="textatea" id="message" cols="30" rows="5" placeholder="Tu wpisz swoje zapytanie"
+                            class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Wyślij!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /// section arricles -->
+    <article class=" articles container">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="media">
+                    <div class="media-left ">
+                        <a href="#">
+                                                            <img class="media-object" src="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500s" width="200"  alt="article">
+                                                          </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Zdrowa żywność, fakty i mity..</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, maiores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="media">
+                    <div class="media-left ">
+                        <a href="#">
+                                                        <img class="media-object" src="https://images.pexels.com/photos/111130/potatoes-ketchup-murder-blood-111130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="200"  alt="article">
+                                                      </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Choroby 21 wieku..</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="media">
+                    <div class="media-left ">
+                        <a href="#">
+                                                    <img class="media-object" src="https://images.pexels.com/photos/161519/abstract-barbecue-barbeque-bbq-161519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="200"  alt="article">
+                                                  </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Śmieciowe jedzienie..</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos atque obcaecati
+                            eveniet?</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </article>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright © 2019 Rad Szym. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
