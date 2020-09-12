@@ -11,7 +11,7 @@
   "author": "ok",
   "license": "ISC",
   "devDependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "dependencies": {
     "request": "^2.88.0"
